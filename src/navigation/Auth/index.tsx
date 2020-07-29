@@ -16,7 +16,7 @@ const Stack = createStackNavigator<AuthStackParamList>()
 
 const AuthStack: React.FunctionComponent = () => {
     return (
-        <Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
+        <Stack.Navigator headerMode="screen" screenOptions={{headerBackTitleVisible: false}}>
             <Stack.Screen name="Launch" component={LaunchScreen} options={{headerShown: false}}/>
             <Stack.Screen name="SignUp" component={SignUp} options={{header: ({navigation}) => <StackHeader navigation={navigation}/>}}/>
         </Stack.Navigator>

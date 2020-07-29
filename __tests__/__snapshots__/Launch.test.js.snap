@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Launch /> should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff8f0",
+      "flex": 1,
+      "paddingHorizontal": 20,
+    }
+  }
+>
+  <Image
+    blurRadius={0.5}
+    resizeMode="cover"
+    source={
+      Object {
+        "uri": "https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",
+      }
+    }
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    testID="launch-background-image"
+  />
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 10,
+        }
+      }
+    >
+      <Text />
+      <Text
+        bold={true}
+        large={true}
+        light={true}
+        style={
+          Array [
+            Object {
+              "color": "#fff8f0",
+              "fontSize": 18,
+              "fontWeight": "bold",
+              "textAlign": "left",
+              "textDecorationColor": "black",
+              "textDecorationLine": "none",
+              "textDecorationStyle": "solid",
+            },
+            Object {
+              "marginLeft": 10,
+            },
+          ]
+        }
+      >
+        GYM APP
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <Text
+        bold={true}
+        center={true}
+        large={true}
+        light={true}
+        style={
+          Array [
+            Object {
+              "color": "#fff8f0",
+              "fontSize": 18,
+              "fontWeight": "bold",
+              "textAlign": "center",
+              "textDecorationColor": "black",
+              "textDecorationLine": "none",
+              "textDecorationStyle": "solid",
+            },
+            Object {
+              "marginBottom": 10,
+            },
+          ]
+        }
+      >
+        Get trainer-guided workouts on demand
+      </Text>
+      <Text
+        center={true}
+        light={true}
+        style={
+          Array [
+            Object {
+              "color": "#fff8f0",
+              "fontSize": 14,
+              "fontWeight": "normal",
+              "textAlign": "center",
+              "textDecorationColor": "black",
+              "textDecorationLine": "none",
+              "textDecorationStyle": "solid",
+            },
+            Object {
+              "marginBottom": 20,
+            },
+          ]
+        }
+      >
+        Free 7-day trial
+      </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#111d4a",
+            "borderRadius": 375,
+            "marginBottom": 20,
+            "opacity": 1,
+            "paddingBottom": 14,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 14,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#fff8f0",
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Try it now
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginBottom": 40,
+          }
+        }
+      >
+        <Text
+          light={true}
+          small={true}
+          style={
+            Array [
+              Object {
+                "color": "#fff8f0",
+                "fontSize": 12,
+                "fontWeight": "normal",
+                "textAlign": "left",
+                "textDecorationColor": "black",
+                "textDecorationLine": "none",
+                "textDecorationStyle": "solid",
+              },
+            ]
+          }
+        >
+          Already a member? 
+        </Text>
+        <View
+          accessible={true}
+          focusable={false}
+          hitSlop={
+            Object {
+              "bottom": 5,
+              "left": 5,
+              "right": 5,
+              "top": 5,
+            }
+          }
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <Text
+            bold={true}
+            light={true}
+            small={true}
+            style={
+              Array [
+                Object {
+                  "color": "#fff8f0",
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                  "textDecorationColor": "black",
+                  "textDecorationLine": "none",
+                  "textDecorationStyle": "solid",
+                },
+              ]
+            }
+          >
+            log in
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;

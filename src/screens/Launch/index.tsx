@@ -22,7 +22,7 @@ const LaunchScreen: React.FunctionComponent<Props> = ({
     
     return (
         <View style={styles.container}>
-            <Image blurRadius={.5} style={styles.img} source={{uri: 'https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80'}} resizeMode="cover"/>
+            <Image testID="launch-background-image" blurRadius={.5} style={styles.img} source={{uri: 'https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80'}} resizeMode="cover"/>
             <SafeAreaView style={{flex: 1}}>
                 <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 10}}>
                     <FontAwesome5 name="dumbbell" size={24} color={theme.color.light} />
