@@ -13,6 +13,7 @@ const StyledContainer = styled.TouchableOpacity<Props>`
 `
 
 const StyledText = styled.Text`
+    font-weight: bold;
     text-align: center;
     color: ${theme.color.light};
 `

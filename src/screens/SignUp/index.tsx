@@ -40,8 +40,7 @@ const SignUpScreen: React.FunctionComponent<Props> = ({
     }
 
     const handleOnSubmit = (): void => {
-        console.log(signUpForm)
-        // navigation.navigate('Launch')
+        navigation.navigate('App')
     }
     return (
         <ScrollView contentContainerStyle={{flex: 1, backgroundColor: theme.color.light}}>

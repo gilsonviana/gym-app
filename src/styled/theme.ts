@@ -8,7 +8,8 @@ export default  {
         secondary: '#ffcf99',
         light: '#fff8f0',
         dark: '#1e1e24',
-        danger: '#92140c'
+        danger: '#92140c',
+        grey: '#eee'
     },
     font: {
         size: {
