@@ -5,6 +5,7 @@ import styled from 'styled-components/native'
 import theme from '@styled/theme'
 
 const StyledText = styled.Text<Props>`
+    text-decoration: ${({underline}) => underline ? 'underline' : 'none'};
     text-align: ${({center}) => center ? 'center' : 'left'};
     font-weight: ${({bold}) => bold ? 'bold' : 'normal'};
     color: ${({light, danger}) => light ? theme.color.light : danger ? theme.color.danger : theme.color.dark};
@@ -12,6 +13,7 @@ const StyledText = styled.Text<Props>`
 `
 
 interface Props extends TextProps {
+    underline?: boolean
     center?: boolean
     bold?: boolean
     light?: boolean

@@ -1,14 +1,24 @@
 import * as React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import LaunchScreen from '@screens/Launch'
+import StackHeader from '@navigation/Components/StackHeader'
 
-const Stack = createStackNavigator()
+import LaunchScreen from '@screens/Launch'
+import SignUp from '@screens/SignUp'
+import theme from '@styled/theme'
+
+export type AuthStackParamList = {
+    Launch: undefined,
+    SignUp: undefined,
+}
+
+const Stack = createStackNavigator<AuthStackParamList>()
 
 const AuthStack: React.FunctionComponent = () => {
     return (
-        <Stack.Navigator headerMode={'none'}>
-            <Stack.Screen name="Launch" component={LaunchScreen}/>
+        <Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
+            <Stack.Screen name="Launch" component={LaunchScreen} options={{headerShown: false}}/>
+            <Stack.Screen name="SignUp" component={SignUp} options={{header: ({navigation}) => <StackHeader navigation={navigation}/>}}/>
         </Stack.Navigator>
     )
 }
