@@ -1,9 +1,8 @@
 import * as React from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
-import { useRoute } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 
-import { OnBoardingStackParamList } from '@navigation/App/OnBoardingStack'
+import { AppStackParamList } from '@navigation/App'
 import theme from '@styled/theme'
 import Chip from '@styled/Chip'
 import Button from '@styled/Button'
@@ -15,10 +14,10 @@ interface IOption {
 }
 
 interface Props {
-    navigation: StackNavigationProp<OnBoardingStackParamList, 'OnBoardingOne'>
+    navigation: StackNavigationProp<AppStackParamList, 'OnBoarding'>
 }
 
-const OnBoardingOne: React.FunctionComponent<Props> = ({
+const OnBoardingThree: React.FunctionComponent<Props> = ({
     navigation
 }) => {
     const { useState, useEffect, useCallback } = React
@@ -45,19 +44,16 @@ const OnBoardingOne: React.FunctionComponent<Props> = ({
 
     const populateOptions = useCallback(() => {
         const OPTIONS: IOption[] = [{
-            label: 'Lose weight',
+            label: '< 15',
             selected: false
         }, {
-            label: 'Run farther or faster',
+            label: '15 - 30',
             selected: false
         }, {
-            label: 'Build strength',
+            label: '30 - 45',
             selected: false
         }, {
-            label: 'Reduce stress',
-            selected: false
-        }, {
-            label: 'Stay fit',
+            label: '45+',
             selected: false
         }]
 
@@ -69,7 +65,7 @@ const OnBoardingOne: React.FunctionComponent<Props> = ({
     }, [])
 
     const handleOnSubmit = (): void => {
-        navigation.navigate('OnBoardingTwo')
+        navigation.navigate('Dashboard')
     }
 
     const renderOptions = (): React.ReactNodeArray => {
@@ -80,10 +76,9 @@ const OnBoardingOne: React.FunctionComponent<Props> = ({
         <ScrollView contentContainerStyle={styles.container}>
             <View style={{flex: 1, alignItems: 'baseline'}}>
                 <TextLead>
-                    Welcome! The following quick
-                    survey will help us personalize
-                    your daily health plan. What's
-                    your primary health goals?
+                    When you work out, on average
+                    how many minutes do you like to
+                    work out?
                 </TextLead>
                 {
                     renderOptions()
@@ -106,4 +101,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default OnBoardingOne
+export default OnBoardingThree

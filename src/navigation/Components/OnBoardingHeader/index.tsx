@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { SafeAreaView, StyleSheet, View } from 'react-native'
+import { RouteProp } from '@react-navigation/native'
 import { StackNavigationProp, HeaderBackButton } from '@react-navigation/stack'
 
 import theme from '@styled/theme'
@@ -7,10 +8,14 @@ import Progress from '@styled/Progress'
 
 interface Props {
     navigation: StackNavigationProp<any>,
+    steps: number
+    currentStep: number
 }
 
 const OnBoardingHeader: React.FunctionComponent<Props> = ({
-    navigation
+    navigation,
+    steps,
+    currentStep
 }) => {
     const handleOnBack = (): void => {
         navigation.goBack()
@@ -20,7 +25,7 @@ const OnBoardingHeader: React.FunctionComponent<Props> = ({
             <View style={styles.container}>
                 <HeaderBackButton labelVisible={false} style={{flex: 1}} tintColor={theme.color.primary} onPress={handleOnBack} />
                 <View style={styles.center}>
-                    <Progress stepsNumber={4} currentStep={1}/>
+                    <Progress stepsNumber={steps} currentStep={currentStep}/>
                 </View>
             </View>
         </SafeAreaView>

@@ -7,7 +7,7 @@ import DashboardHeader from '@navigation/Components/DashboardHeader'
 import DashboardStack from '@navigation/App/Dashboard'
 
 export type AppStackParamList = {
-    OnBoarding: undefined,
+    OnBoarding: undefined
     Dashboard: undefined
 }
 
@@ -20,7 +20,7 @@ const AppStack: React.FunctionComponent = () => {
                 name="OnBoarding" 
                 component={OnBoardingStack}
                 options={{
-                    header: ({navigation}) => <OnBoardingHeader navigation={navigation}/>
+                    headerShown: false
                 }}/>
             <Stack.Screen 
                 name="Dashboard"

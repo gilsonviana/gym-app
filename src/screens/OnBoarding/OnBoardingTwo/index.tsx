@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
-import { useRoute } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 
 import { OnBoardingStackParamList } from '@navigation/App/OnBoardingStack'
@@ -15,10 +14,10 @@ interface IOption {
 }
 
 interface Props {
-    navigation: StackNavigationProp<OnBoardingStackParamList, 'OnBoardingOne'>
+    navigation: StackNavigationProp<OnBoardingStackParamList, 'OnBoardingTwo'>
 }
 
-const OnBoardingOne: React.FunctionComponent<Props> = ({
+const OnBoardingTwo: React.FunctionComponent<Props> = ({
     navigation
 }) => {
     const { useState, useEffect, useCallback } = React
@@ -45,19 +44,13 @@ const OnBoardingOne: React.FunctionComponent<Props> = ({
 
     const populateOptions = useCallback(() => {
         const OPTIONS: IOption[] = [{
-            label: 'Lose weight',
+            label: 'Beginner',
             selected: false
         }, {
-            label: 'Run farther or faster',
+            label: 'Intermediate',
             selected: false
         }, {
-            label: 'Build strength',
-            selected: false
-        }, {
-            label: 'Reduce stress',
-            selected: false
-        }, {
-            label: 'Stay fit',
+            label: 'Advanced',
             selected: false
         }]
 
@@ -69,7 +62,7 @@ const OnBoardingOne: React.FunctionComponent<Props> = ({
     }, [])
 
     const handleOnSubmit = (): void => {
-        navigation.navigate('OnBoardingTwo')
+        navigation.navigate('OnBoardingThree')
     }
 
     const renderOptions = (): React.ReactNodeArray => {
@@ -80,10 +73,8 @@ const OnBoardingOne: React.FunctionComponent<Props> = ({
         <ScrollView contentContainerStyle={styles.container}>
             <View style={{flex: 1, alignItems: 'baseline'}}>
                 <TextLead>
-                    Welcome! The following quick
-                    survey will help us personalize
-                    your daily health plan. What's
-                    your primary health goals?
+                    What's you current level
+                    of fitness?
                 </TextLead>
                 {
                     renderOptions()
@@ -106,4 +97,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default OnBoardingOne
+export default OnBoardingTwo
