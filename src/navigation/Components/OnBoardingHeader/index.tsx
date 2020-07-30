@@ -1,17 +1,15 @@
 import * as React from 'react'
 import { SafeAreaView, StyleSheet, View } from 'react-native'
 import { StackNavigationProp, HeaderBackButton } from '@react-navigation/stack'
-import { FontAwesome5 } from '@expo/vector-icons';
 
 import theme from '@styled/theme'
-import Text from '@styled/Text'
 import Progress from '@styled/Progress'
 
 interface Props {
     navigation: StackNavigationProp<any>,
 }
 
-const StackHeader: React.FunctionComponent<Props> = ({
+const OnBoardingHeader: React.FunctionComponent<Props> = ({
     navigation
 }) => {
     const handleOnBack = (): void => {
@@ -49,4 +47,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default StackHeader
+export default OnBoardingHeader

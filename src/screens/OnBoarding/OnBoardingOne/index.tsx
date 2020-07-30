@@ -1,6 +1,8 @@
 import * as React from 'react'
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, StyleSheet, ScrollView } from 'react-native'
+import {  StackNavigationProp} from '@react-navigation/stack'
 
+import { AppStackParamList } from '@navigation/App'
 import theme from '@styled/theme'
 import Chip from '@styled/Chip'
 import Button from '@styled/Button'
@@ -11,7 +13,13 @@ interface IOption {
     selected: boolean
 }
 
-const OnBoardingOne: React.FunctionComponent = () => {
+interface Props {
+    navigation: StackNavigationProp<AppStackParamList, 'OnBoarding'>
+}
+
+const OnBoardingOne: React.FunctionComponent<Props> = ({
+    navigation
+}) => {
     const { useState, useEffect, useCallback } = React
 
     const [options, setOptions] = useState<IOption[]>([])
@@ -59,6 +67,10 @@ const OnBoardingOne: React.FunctionComponent = () => {
         populateOptions()
     }, [])
 
+    const handleOnSubmit = (): void => {
+        navigation.navigate('Dashboard')
+    }
+
     const renderOptions = (): React.ReactNodeArray => {
         return options.map((option, i) => <Chip key={`onboardigin-option-${i}`} onPress={() => handleOptionOnPress(option.label)}  style={{marginTop: theme.spacing.margin / 1.5}} text={option.label} isSelected={option.selected}/>)
     }
@@ -77,7 +89,7 @@ const OnBoardingOne: React.FunctionComponent = () => {
                 }
             </View>
             <View style={{marginBottom: 40}}>
-                <Button disabled={!isOptionsValid()} text="Continue"/>
+                <Button disabled={!isOptionsValid()} text="Continue" onPress={handleOnSubmit}/>
             </View>
         </ScrollView>
     ) 
